@@ -1,17 +1,39 @@
-<!doctype html>
-<html ng-app="myApp">
-  <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script var app = angular.module('myApp', [])></script>
-	<script app.run(function($rootScope) {
- 	 $rootScope.name = "Ari Lerner";
-	})></script>
-  </head>
-  <body>
-   <form action="demo_form.asp" method="get">
-  Choose your favorite subject:
-  <button name="subject" type="submit" value="fav_HTML">HTML</button>
-  <button name="subject" type="submit" value="fav_CSS">CSS</button>
-</form> 
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+  <div ng-controller="MyController" >
+    <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
+    <br/>
+    Data from server: {{myData.fromServer}}
+  </div>
+
+  <script>
+    angular.module("myapp", [])
+        .controller("MyController", function($scope, $http) {
+            $scope.myData = {};
+            $scope.myData.doClick = function(item, event) {
+
+                var responsePromise = $http.get("/angularjs-examples/json-test-data.jsp");
+
+                responsePromise.success(function(data, status, headers, config) {
+                    $scope.myData.fromServer = data.title;
+                });
+                responsePromise.error(function(data, status, headers, config) {
+                    alert("AJAX failed!");
+                });
+            }
+
+
+        } );
+  </script>
+
+</body>
+
 </html>
