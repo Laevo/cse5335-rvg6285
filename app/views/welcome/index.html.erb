@@ -1,77 +1,24 @@
 <!DOCTYPE html>
-
 <html>
-
-
-  <head>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="script.js"></script>
-
-  </head>
-
-
-  <body>
-
-    <ul id="myList"></ul>
-
-  <script>
-
-  //@author Peter Leger
-
-    function loadJSONDoc() {
-
-      var xmlhttp;
-
-      xmlhttp = new XMLHttpRequest();
-
-      xmlhttp.onreadystatechange = function() {
-
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-
-          var obj = JSON.parse(xmlhttp.responseText);
-
-          var output = "<table>";
-
-          for (var name in obj[0].prices[0]) {
-
-            output += "<tr><td>" + name + "</td>" + "<td>" + obj[0].prices[0][name] + "</td></tr>";
-
-          }
-
-          output += "</table>";
-
-          document.getElementById("myList").innerHTML = output;
-
-        }
-
-      }
-
-      xmlhttp.open("GET", "data.json", true);
-
-      xmlhttp.send();
-
-    }
-
-
-    document.addEventListener("DOMContentLoaded", function(event) {
-
-      loadJSONDoc();
-
-    });
-
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
     $("button").click(function(){
-    $.getJSON("data.json", function(result){
-        $.each(result, function(i, field){
-            $("div").append(field + " ");
+        $.getJSON("data.json", function(result){
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
         });
     });
-}); 
+});
+</script>
+</head>
+<body>
 
-  </script>
+<button>Get JSON data</button>
 
-  </body>
+<div></div>
 
-
+</body>
 </html>
