@@ -3,16 +3,7 @@
     <head>
         <title>Hello jQuery</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: "http://rest-service.guides.spring.io/greeting"
-                }).then(function(data) {
-                $('.greeting-id').append(data.id);
-                $('.greeting-content').append(data.content);
-            });
-        });
-        </script>
+        <script src="hello.js"></script>
     </head>
 
     <body>
@@ -22,4 +13,3 @@
         </div>
     </body>
 </html>
-
