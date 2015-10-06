@@ -1,0 +1,12 @@
+/* Styles go here */
+
+
+table {
+
+    border-collapse: separate;
+
+    border-spacing: 20px;
+
+    border: 1px solid silver;
+
+}

@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello jQuery</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="hello.js"></script>
-    </head>
 
-    <body>
-        <div>
-            <p class="greeting-id">The ID is </p>
-            <p class="greeting-content">The content is </p>
-        </div>
-    </body>
+<html>
+
+
+  <head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+  </head>
+
+
+  <body>
+
+    <ul id="myList"></ul>
+
+  <script>
+
+  //@author Peter Leger
+
+    function loadJSONDoc() {
+
+      var xmlhttp;
+
+      xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+          var obj = JSON.parse(xmlhttp.responseText);
+
+          var output = "<table>";
+
+          for (var name in obj[0].prices[0]) {
+
+            output += "<tr><td>" + name + "</td>" + "<td>" + obj[0].prices[0][name] + "</td></tr>";
+
+          }
+
+          output += "</table>";
+
+          document.getElementById("myList").innerHTML = output;
+
+        }
+
+      }
+
+      xmlhttp.open("GET", "data.json", true);
+
+      xmlhttp.send();
+
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      loadJSONDoc();
+
+    });
+
+  </script>
+
+  </body>
+
+
 </html>
