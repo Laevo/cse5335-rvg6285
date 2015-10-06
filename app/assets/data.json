@@ -1,0 +1,28 @@
+{
+  "data" : {
+    "id" : 123,
+    "name" : "John"
+  }
+}
+
+
+var me = {
+	"age" : "24",
+	"hometown" : "Nagpur, MH",
+	"gender" : "male"
+};
+
+
+
+var family = {
+    "rohit" : {
+        "name" : "Rohit Gaikwad",
+        "age" : "24",
+        "gender" : "male"
+    },
+    "Mason" : {
+        "name" : "Mason Jason",
+        "age" : "21",
+        "gender" : "male"
+    }
+}
