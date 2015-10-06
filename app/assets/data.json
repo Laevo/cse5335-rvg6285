@@ -1,28 +1,23 @@
 {
-  "data" : {
-    "id" : 123,
-    "name" : "John"
-  }
-}
+   "President": "Alan Isaac",
+   "CEO": "David Richardson",
+  
+   "India": [
+      "Sachin Tendulkar",
+      "Virender Sehwag",
+      "Gautam Gambhir",
+   ],
 
+   "Srilanka": [
+      "Lasith Malinga",
+      "Angelo Mathews",
+      "Kumar Sangakkara"
+   ],
 
-var me = {
-	"age" : "24",
-	"hometown" : "Nagpur, MH",
-	"gender" : "male"
-};
-
-
-
-var family = {
-    "rohit" : {
-        "name" : "Rohit Gaikwad",
-        "age" : "24",
-        "gender" : "male"
-    },
-    "Mason" : {
-        "name" : "Mason Jason",
-        "age" : "21",
-        "gender" : "male"
-    }
+   "England": [
+      "Alastair Cook",
+      "Jonathan Trott",
+      "Kevin Pietersen"
+   ]
+    
 }
