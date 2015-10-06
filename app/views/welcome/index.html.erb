@@ -5,10 +5,8 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.getJSON("data.json", function(result){
-            $.each(result, function(i, field){
-                $("div").append(field + " ");
-            });
+        $.getJSON("data.json", function(data){
+        
         });
     });
 });
@@ -16,9 +14,11 @@ $(document).ready(function(){
 </head>
 <body>
 
-<button>Get JSON data</button>
-
 <div></div>
+
+<button>Get data</button>
+
+
 
 </body>
 </html>
