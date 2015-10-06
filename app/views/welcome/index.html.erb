@@ -1,13 +1,12 @@
 <!doctype html>
 <html ng-app="myApp">
   <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/main.js"></script>
     <script var app = angular.module('myApp', [])></script>
 	<script app.run(function($rootScope) {
  	 $rootScope.name = "Ari Lerner";
 	})></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="js/main.js"></script>
-
   </head>
   <body>
   {{ name }}
