@@ -6,7 +6,8 @@
 $(document).ready(function(){
     $("button").click(function(){
         $.getJSON("data.json", function(data){
-        
+            alert ("Data: " + data);
+            });
         });
     });
 });
@@ -14,7 +15,7 @@ $(document).ready(function(){
 </head>
 <body>
 
-<div></div>
+<div id></div>
 
 <button>Get data</button>
 
