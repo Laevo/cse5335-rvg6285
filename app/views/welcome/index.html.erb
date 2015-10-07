@@ -10,7 +10,7 @@
     app.controller('myController', ['$scope', '$http', function($scope, $http) {
     $scope.clickButton = function() {
     $http.get('data.json').success(function(data) {
-        $scope.message = data.msg;
+        $scope.getnames = data.msg;
       });
   }
 }]);
@@ -18,8 +18,8 @@
 
 </head>
 <body ng-controller="myController">
-  <button ng-click="clickButton()">Click!</button>
-  <div ng-bind="message"></div>
+  <button ng-click="clickButton()">Get Data</button>
+  <div ng-bind="getnames"></div>
 </body>
 
 </html>
