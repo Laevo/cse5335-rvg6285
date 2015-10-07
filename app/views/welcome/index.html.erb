@@ -10,7 +10,7 @@
     app.controller('myController', ['$scope', '$http', function($scope, $http) {
     $scope.clickButton = function() {
     $http.get('data.json').success(function(data) {
-        $scope.message = data.msg;
+        $scope.message = data.name;
       });
   }
 }]);
