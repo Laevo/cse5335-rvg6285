@@ -1,6 +1,8 @@
-   {"name":"Rohit", "age":"24"},
-   {"name":"Hema", "age":"22"},
-   {"name":"Rekha", "age":"45"},
-   {"name":"Jaya", "age":"34"},
-   {"name":"Sushma", "age":"45"},
-   {"name":"Nirma", "age":"67"}
+{"Members": [
+   {"names":"Rohit", "age":"24"},
+   {"names":"Hema", "age":"22"},
+   {"names":"Rekha", "age":"45"},
+   {"names":"Jaya", "age":"34"},
+   {"names":"Sushma", "age":"45"},
+   {"names":"Nirma", "age":"67"}
+]}
