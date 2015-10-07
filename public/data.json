@@ -1,1 +1,7 @@
-{"msg": "I AM A TEST MESSAGE" }
+[
+        {key: "Question 1",
+         value: "Answer1"},
+
+        {key: "Question 2",
+         value: "Answer2"}
+    ]

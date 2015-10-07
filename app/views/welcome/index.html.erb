@@ -1,13 +1,14 @@
 <!doctype html>
 <html ng-app="proj" >
 <head>
+
+<title>First Project</title>
   <meta charset="utf-8">
-  <title>First Project</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
 
   <script>
     var app = angular.module('proj', []);
-    app.controller('myController', ['$scope', '$http', function($scope, $http) {
+    app.controller('newcontroller', ['$scope', '$http', function($scope, $http) {
     $scope.clickButton = function() {
     $http.get('data.json').success(function(data) {
         $scope.message = data.msg;
@@ -17,9 +18,9 @@
   </script>
 
 </head>
-<body ng-controller="myController">
+<body ng-controller="newcontroller">
   <button ng-click="clickButton()">Click!</button>
-  <div ng-bind="message"></div>
+  <div ng-repeat="message"> {{f.key}}-{{f.value}} </div>
 </body>
 
 </html>
