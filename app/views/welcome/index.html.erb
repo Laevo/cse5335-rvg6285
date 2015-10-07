@@ -1,55 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html ng-app="myTestApp" >
+
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-function data_func() {
 
-$(document).ready(function(){
-    $("#fetch").click(function(){
-        $.getJSON("data.json", function(json){
-            for (var key in json) {
-                            if (json.hasOwnProperty(key)) {
-                                var item = json[key];
-                                console.log(item.id)
-                            };  
-            };
-        });
-    });
-});
-}
-</script>
+  <meta charset="utf-8">
 
-<script>
-$(document).ready(function(){
-    $('#search').click(function() {
-                        $.ajax({
-                              type : 'GET',
-                              dataType : 'json',
-                              url: 'data.json',
-                              success : function(data) {
-                              console.log(data);
-                              };
-                        });      
-                        /*$.ajax({
-                            type: 'POST',
-                            url: 'cityResults.htm',
-                            data: $('#cityDetails').serialize(),
+  <title> load json data only after a button is pressed in angularJS</title>
 
-                            success: function(data){ 
-                                alert(data);    
-                            },
-                            error: function(jqXHR, textStatus, errorThrown){
-                                alert('error: ' + textStatus + ': ' + errorThrown);
-                            }
-                        });
-                        return false;//suppress natural form submission*/
-    }); 
-});
-</script>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+
+  <script src="app.js"></script>
+
 </head>
-<body>
-<div id="search"> Get Data</div>
-<button id="fetch" onclick= "data_func()">Get dataaa</button>
+
+<body ng-controller="myController">
+
+  
+
+  <button ng-click="clickButton()">Click!</button>
+
+  <div ng-bind="message"></div>
+
+  
+
 </body>
+
 </html>
