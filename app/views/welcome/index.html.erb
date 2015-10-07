@@ -16,9 +16,38 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<script>
+$(document).ready(function(){
+    $('#search').click(function() {
+                        $.ajax({
+                              type : 'GET',
+                              dataType : 'json',
+                              url: 'data.json',
+                              success : function(data) {
+                              console.log(data);
+                              };
+                        });      
+                        /*$.ajax({
+                            type: 'POST',
+                            url: 'cityResults.htm',
+                            data: $('#cityDetails').serialize(),
+
+                            success: function(data){ 
+                                alert(data);    
+                            },
+                            error: function(jqXHR, textStatus, errorThrown){
+                                alert('error: ' + textStatus + ': ' + errorThrown);
+                            }
+                        });
+                        return false;//suppress natural form submission*/
+    }); 
+
+});
+</script>
 </head>
 <body>
-<!-- <div id="fetch"> Get Data</div> -->
+<div id="search"> Get Data</div>
 <button id="fetch">Get dataaa</button>
 </body>
 </html>
