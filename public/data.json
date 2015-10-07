@@ -1,8 +1,1 @@
-{"Members": [
-   {"names":"Rohit", "age":"24"},
-   {"names":"Hema", "age":"22"},
-   {"names":"Rekha", "age":"45"},
-   {"names":"Jaya", "age":"34"},
-   {"names":"Sushma", "age":"45"},
-   {"names":"Nirma", "age":"67"}
-]}
+{"msg": "I AM A TEST MESSAGE" }

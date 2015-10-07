@@ -2,7 +2,7 @@
 <html ng-app="myTestApp" >
 <head>
   <meta charset="utf-8">
-  <title> load json data only after a button is pressed in angularJS</title>
+  <title>First Project</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
 
   <script>
@@ -10,7 +10,7 @@
     app.controller('myController', ['$scope', '$http', function($scope, $http) {
     $scope.clickButton = function() {
     $http.get('data.json').success(function(data) {
-        $scope.message = data.names;
+        $scope.message = data.msg;
       });
   }
 }]);
