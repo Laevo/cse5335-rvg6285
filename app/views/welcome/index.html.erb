@@ -5,12 +5,14 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.getJSON("data.json", function(data){
-            var mydata = jquery.parseJSON(data);
-            $('#results').html('Data ' + mydata.name );
-            }))    
-            });
-            });
+        $.getJSON("data.json", function(json){
+            for (var key in json) {
+    
+                            if (json.hasOwnProperty(key)) {
+                                var item = json[key];
+                                console.log(item.id)
+                            };  
+            };
         });
     });
 });
@@ -19,7 +21,6 @@ $(document).ready(function(){
 <body>
 
 <button>Get data</button>
-<span id="results"></span>
 
 </body>
 </html>
