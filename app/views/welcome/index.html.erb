@@ -11,7 +11,7 @@
     app.controller('newcontroller', ['$scope', '$http', function($scope, $http) {
     $scope.DataButton = function() {
     $http.get('data.json').success(function(data) {
-        $scope.givename = data.names;
+        $scope.message = data.names;
       });
   }
 }]);
@@ -20,7 +20,7 @@
 </head>
 <body ng-controller="newcontroller">
   <button ng-click="DataButton()">Get Data</button>
-  <div ng-bind="givename"></div>
+  <div ng-bind="message"></div>
 </body>
 
 </html>
