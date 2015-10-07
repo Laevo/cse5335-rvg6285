@@ -9,7 +9,7 @@
   <script>
     var app = angular.module('proj', []);
     app.controller('newcontroller', ['$scope', '$http', function($scope, $http) {
-    $scope.clickButton = function() {
+    $scope.DataButton = function() {
     $http.get('data.json').success(function(data) {
         $scope.message = data.msg;
       });
@@ -19,7 +19,7 @@
 
 </head>
 <body ng-controller="newcontroller">
-  <button ng-click="clickButton()">Click!</button>
+  <button ng-click="DataButton()">Get Data</button>
   <div ng-bind="message"></div>
 </body>
 
