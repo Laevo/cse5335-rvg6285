@@ -3,6 +3,8 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
+function myFunction() {
+
 $(document).ready(function(){
     $("#fetch").click(function(){
         $.getJSON("data.json", function(json){
@@ -15,6 +17,7 @@ $(document).ready(function(){
         });
     });
 });
+}
 </script>
 
 <script>
@@ -47,6 +50,6 @@ $(document).ready(function(){
 </head>
 <body>
 <div id="search"> Get Data</div>
-<button id="fetch">Get dataaa</button>
+<button id="fetch" onclick= "data_func()">Get dataaa</button>
 </body>
 </html>
