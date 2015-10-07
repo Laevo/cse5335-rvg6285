@@ -1,31 +1,27 @@
 <!doctype html>
-
 <html ng-app="myTestApp" >
-
 <head>
-
   <meta charset="utf-8">
-
   <title> load json data only after a button is pressed in angularJS</title>
-
   <link rel="stylesheet" href="style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
 
-  <script src="app.js"></script>
+  <script>
+    var app = angular.module('myTestApp', []);
+    app.controller('myController', ['$scope', '$http', function($scope, $http) {
+    $scope.clickButton = function() {
+    $http.get('test.json').success(function(data) {
+        $scope.message = data.msg;
+      });
+  }
+}]);
+  </script>
 
 </head>
-
 <body ng-controller="myController">
-
-  
-
   <button ng-click="clickButton()">Click!</button>
-
   <div ng-bind="message"></div>
-
-  
-
 </body>
 
 </html>
