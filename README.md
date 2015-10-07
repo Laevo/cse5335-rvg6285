@@ -11,8 +11,7 @@ First Project
 
 #e) I have installed a sublime text editor to manage my .html, .json files. They give syntax specific colours which makes code easy to look at.
 
-#f)
-First go to my project destination by
+#f)First go to my project destination by
 	$ cd app1
 If I have added and files i neet to initialize git by
 	$ git init
